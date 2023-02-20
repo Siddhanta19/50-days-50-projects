@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spinner {
+	border-radius: 100%;
+	margin: auto;
+}

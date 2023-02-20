@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#canvas {
+	@apply border-4 border-blue-700 rounded-sm;
+}
+
+.toolbox {
+	@apply bg-blue-700 border-black rounded-sm p-4;
+	display: flex;
+	width: 100%;
+}
+
+.toolbox > * {
+	@apply bg-slate-300 text-black font-bold text-2xl m-1 px-5 rounded-md;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		@apply bg-slate-400;
+	}
+}
+
+.toolbox #color {
+	padding: 0;
+	appearance: none;
+	background-color: transparent;
+	width: 40px;
+	height: 45px;
+
+	&::-webkit-color-swatch {
+		border-style: none;
+		border-radius: 50%;
+	}
+
+	&::-webkit-color-swatch:hover {
+		@apply border-blue-700 border-4 border-solid;
+	}
+}
+
+.toolbox > *:last-child {
+	margin-left: auto;
+}

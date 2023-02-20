@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.kinetic {
+	@apply w-20 h-20;
+	position: relative;
+}
+
+.kinetic::after,
+.kinetic::before {
+	@apply top-0 left-0 h-0 w-0;
+	position: absolute;
+	content: "";
+	border: 50px solid transparent;
+	border-bottom-color: white;
+	animation: rotateA 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+	transform: rotate(90deg);
+	animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+	0%,
+	25% {
+		transform: rotate(0deg);
+	}
+
+	50%,
+	75% {
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateB {
+	0%,
+	25% {
+		transform: rotate(90deg);
+	}
+
+	50%,
+	75% {
+		transform: rotate(270deg);
+	}
+
+	100% {
+		transform: rotate(450deg);
+	}
+}

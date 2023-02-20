@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#container::before {
+	@apply w-[100vw] h-[100vh];
+	content: "";
+	inset: 0;
+	z-index: 0;
+	display: none;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+	position: fixed;
+	transform: translateY(-500%);
+	transition: 0.5s all ease;
+	z-index: 11;
+}
+
+/* make the before element in .opened element as block */
+#container.opened::before {
+	display: block;
+}
+
+#container.opened .modal {
+	transform: translateY(0);
+}

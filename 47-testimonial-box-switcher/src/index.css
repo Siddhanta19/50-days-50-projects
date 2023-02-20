@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Montserrat, sans-serif;
+}
+
+.testimonial-container {
+	@apply bg-blue-800 rounded-2xl py-14 px-20 md:py-9 md:px-10 mx-4 sm:mx-8 max-w-5xl;
+	position: relative;
+}
+
+.fa-quote {
+	@apply text-3xl md:text-2xl;
+	color: rgba(255, 255, 255, 0.4);
+	position: absolute;
+}
+
+.fa-quote-left {
+	@apply top-3 left-10 md:left-2.5;
+}
+
+.testimonial {
+	@apply text-xl;
+}
+
+.user {
+	@apply flex items-center justify-center mt-3;
+
+	.user-image {
+		@apply rounded-[50%] w-20 md:w-32 md:h-32 h-20 object-cover;
+	}
+
+	.user-details {
+		@apply ml-3.5;
+	}
+
+	.username {
+		@apply font-semibold;
+	}
+
+	.role {
+		@apply mt-3 font-normal;
+	}
+}
+
+.progress-bar {
+	@apply bg-slate-100 h-1 rounded-full -mt-8 mb-5 md:-mt-3.5 md:mb-5;
+	animation: grow 10s linear infinite;
+	transform-origin: left;
+}
+
+@keyframes grow {
+	0% {
+		transform: scaleX(0);
+	}
+}

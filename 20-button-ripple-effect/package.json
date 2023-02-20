@@ -1,0 +1,18 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cross-env TAILWIND_MODE=watch vite",
+    "build": "cross-env TAILWIND_MODE=build vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.0",
+    "prettier-plugin-tailwindcss": "^0.2.0",
+    "vitawind": "^2.2.4",
+    "vite": "^3.2.4"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "name": "11-event-keycodes"
+}

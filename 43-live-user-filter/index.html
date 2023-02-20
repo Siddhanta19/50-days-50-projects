@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Live User Filter</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen items-center bg-zinc-800 overflow-hidden text-slate-200 justify-center antialiased">
+			<div class="wrapper">
+				<header class="text-center">
+					<h4 class="title">Live User Filter</h4>
+					<small class="subtitle">Search by name and/or location.</small>
+					<input
+						type="text"
+						name="filter"
+						id="filter"
+						placeholder="Search..." />
+				</header>
+
+				<ul id="result" class="user-list">
+					<!-- <li>
+						<img
+							src="https://randomuser.me/api/portraits/women/33.jpg"
+							alt="Sara" />
+						<div class="user-info">
+							<h4>Sara Smith</h4>
+							<p>Wexford, Ireland</p>
+						</div>
+					</li> -->
+					<li>
+						<h3>Loading...</h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

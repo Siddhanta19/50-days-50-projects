@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: Poppins, sans-serif;
+}
+
+nav {
+	@apply bg-zinc-600 p-6 w-full;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	z-index: 1;
+}
+
+h1 {
+	@apply text-3xl tracking-wider;
+}
+
+.page-links {
+	@apply text-xl hidden md:flex;
+	gap: 3vw;
+}
+
+/* hero section */
+
+.hero-section {
+	@apply w-full h-screen;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url("./assets/hero.jpg");
+}
+
+.hero-content {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+
+	p {
+		@apply text-xl;
+	}
+}
+
+.hero-section::before {
+	@apply w-full h-full bg-[rgba(0,0,0,0.7)];
+	content: "";
+	position: absolute;
+}
+
+/* content section */
+
+h2 {
+	@apply text-2xl;
+}
+
+.content-section {
+	@apply bg-zinc-700 px-28 py-44 space-y-20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.content {
+	@apply max-w-3xl;
+
+	p {
+		@apply mt-5 text-xl;
+		text-align: left;
+	}
+}
+
+footer {
+	@apply p-10;
+	display: grid;
+	gap: 5rem;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	justify-content: center;
+}

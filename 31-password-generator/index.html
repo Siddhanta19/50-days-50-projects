@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-indigo-900 text-slate-200 justify-center">
+			<div class="wrapper w-3/4 shadow-sm shadow-indigo-800 p-5 bg-[#23235b]">
+				<h1 class="text-2xl text-center">Password Generator</h1>
+				<div
+					class="result-container bg-[rgba(0,0,0,0.4)] flex justify-start items-center relative text-xl tracking-widest px-3 mt-5 py-2">
+					<span
+						id="result"
+						class="break-words flex items-center justify-center h-[2.5rem] max-w-[calc(100%-3rem)]"></span>
+					<button
+						class="btn absolute right-1 w-12 h-12 bg-[#3b3b98] text-xl"
+						id="clipboard">
+						<i class="fa-regular fa-clipboard"></i>
+					</button>
+				</div>
+				<div class="settings mt-2">
+					<div class="setting">
+						<label>Password Length</label>
+						<input
+							class="text-xl bg-[rgba(0,0,0,0.4)] pl-2 h-8"
+							type="number"
+							id="length"
+							min="4"
+							max="20"
+							value="20" />
+					</div>
+					<div class="setting">
+						<label> Include uppercase letters</label>
+						<input type="checkbox" id="uppercase" checked />
+					</div>
+					<div class="setting">
+						<label> Include lowercase letters</label>
+						<input type="checkbox" id="lowercase" checked />
+					</div>
+					<div class="setting">
+						<label> Include numbers letters</label>
+						<input type="checkbox" id="numbers" checked />
+					</div>
+					<div class="setting">
+						<label> Include symbols</label>
+						<input type="checkbox" id="symbols" checked />
+					</div>
+				</div>
+
+				<button
+					class="btn btn-large w-full px-2 py-3 bg-[#3b3b98]"
+					id="generate">
+					Generate Password
+				</button>
+			</div>
+		</div>
+		<script
+			src="https://kit.fontawesome.com/17d9786f54.js"
+			crossorigin="anonymous"></script>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

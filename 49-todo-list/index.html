@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project Template</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="grid gap-10 grid-flow-row justify-center min-h-screen font-[Poppins] items-center bg-zinc-800 text-slate-200"
+			oncontextmenu="return false;">
+			<h1 class="text-8xl opacity-90 mt-5 text-center text-purple-300">
+				todos
+			</h1>
+			<form
+				id="form"
+				class="shadow-md rounded-md shadow-black w-[386px] md:w-[700px]">
+				<input
+					type="text"
+					id="input"
+					class="input rounded-t-md focus:outline-none focus:border-purple-300 focus:border-opacity-75 block w-full px-3 py-2 text-2xl caret-white text-zinc-200 placeholder:text-zinc-400 bg-zinc-700 placeholder:opacity-60 border-b-4 border-zinc-700"
+					placeholder="Enter your todo"
+					autocomplete="off" />
+
+				<ul id="todos" class="todos">
+					<!-- <li class="completed">My First Todo</li>
+					<li>My Second Todo</li>
+					<li>My Third Todo</li> -->
+				</ul>
+			</form>
+
+			<small class="mb-5">
+				Enter to submit <br />
+				Left click to toggle completed. <br />
+				Right click to delete todo.</small
+			>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

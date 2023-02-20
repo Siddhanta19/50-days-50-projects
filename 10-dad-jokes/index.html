@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dad Jokes</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen from-sky-700 to-sky-800 bg-gradient-to-t flex-col items-center justify-center py-8 px-8 text-center">
+			<div
+				class="wrapper w-full shadow-gray-800 shadow-lg rounded-md bg-slate-300 space-y-14 p-10">
+				<h1 class="text-xl text-sky-800 tracking-wide font-semibold">
+					Don't laugh Challenge
+				</h1>
+
+				<div id="id" class="joke font-semibold text-2xl relative">
+					<div
+						class="spinner w-12 h-12 border-8 border-gray-100 border-t-8 border-t-sky-800 animate-spin"></div>
+				</div>
+
+				<button
+					id="jokeBtn"
+					class="btn select-none bg-sky-700 rounded-md px-5 text-xl text-slate-200 shadow-gray-400 shadow-md hover:bg-sky-800 py-2">
+					Get Another Joke
+				</button>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

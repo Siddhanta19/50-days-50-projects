@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mobile Tab Navigation</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-zinc-800 text-slate-200 justify-center">
+			<div class="phone">
+				<img
+					src="https://placeimg.com/1000/1000/arch"
+					class="content show"
+					alt="home" />
+				<img
+					src="https://placeimg.com/1000/1000/people"
+					class="content"
+					alt="home" />
+				<img
+					src="https://placeimg.com/1000/1000/animals"
+					class="content"
+					alt="home" />
+				<img
+					src="https://placeimg.com/1000/1000/tech"
+					class="content"
+					alt="home" />
+
+				<nav>
+					<ul>
+						<li class="active">
+							<i class="fa-solid fa-home"></i>
+							<p>Home</p>
+						</li>
+						<li>
+							<i class="fa-solid fa-box"></i>
+							<p>Work</p>
+						</li>
+						<li>
+							<i class="fa-solid fa-book-open"></i>
+							<p>Blog</p>
+						</li>
+						<li>
+							<i class="fa-solid fa-users"></i>
+							<p>About Us</p>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<script
+			src="https://kit.fontawesome.com/61dfdb5784.js"
+			crossorigin="anonymous"></script>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

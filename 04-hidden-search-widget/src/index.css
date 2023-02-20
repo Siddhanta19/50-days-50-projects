@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.search {
+	position: relative;
+	height: 50px;
+
+	.input {
+		@apply bg-slate-100 border-0 text-lg p-4 h-12 w-12;
+		transition: width 0.3s ease;
+		border-radius: 12px;
+	}
+}
+
+.btn {
+	@apply bg-slate-100 text-xl absolute top-0 left-0 h-12 w-12;
+	transition: transform 0.3s ease;
+	border-radius: 12px;
+}
+
+.btn:focus,
+.input:focus {
+	outline: none;
+}
+
+.search.active {
+	.input {
+		width: 200px;
+		border-radius: 0;
+		border-top-left-radius: 0.75rem;
+		border-bottom-left-radius: 0.75rem;
+	}
+
+	.btn {
+		transform: translateX(198px);
+		border-radius: 0;
+		border-top-right-radius: 0.75rem;
+		border-bottom-right-radius: 0.75rem;
+	}
+}

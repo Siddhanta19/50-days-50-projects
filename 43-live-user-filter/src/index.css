@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Poppins, sans-serif;
+}
+
+.wrapper {
+	@apply rounded-md bg-slate-900 my-5;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+	@apply text-2xl;
+}
+
+.subtitle {
+	@apply my-3.5 opacity-90;
+	display: inline-block;
+}
+
+header {
+	@apply bg-indigo-700 py-8 px-5 rounded-t-md;
+}
+
+header input {
+	@apply border-0 rounded-full focus:outline-none px-4 py-1.5 text-lg w-full;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.user-list {
+	max-height: 400px;
+	overflow-y: auto;
+
+	li {
+		@apply p-5;
+		display: flex;
+	}
+
+	img {
+		@apply w-12 h-12 rounded-[50%];
+		object-fit: cover;
+	}
+}
+
+.user-list .user-info {
+	margin-left: 15px;
+	h4 {
+		@apply mb-1.5;
+	}
+	p {
+		font-size: 14px;
+	}
+}
+
+/* .user-list li:not(:last-of-type) {
+	@apply border-b-2 border-slate-400 border-opacity-50;
+} */
+
+.hide {
+	display: none !important;
+}

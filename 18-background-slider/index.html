@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Background Slider</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-zinc-800 text-slate-200 justify-center py-8 text-center">
+			<div class="slider-container">
+				<div
+					class="slide"
+					style="background-image: url('./src/assets/coding.jpg')"></div>
+				<div
+					class="slide"
+					style="background-image: url('./src/assets/christmas.jpg')"></div>
+				<div
+					class="slide"
+					style="background-image: url('./src/assets/pattern.jpg')"></div>
+				<div
+					class="slide"
+					style="background-image: url('./src/assets/phones.jpg')"></div>
+				<div
+					class="slide"
+					style="background-image: url('./src/assets/highway.jpg')"></div>
+				<div
+					class="slide"
+					style="background-image: url('./src/assets/desert.jpg')"></div>
+
+				<button class="arrow right-arrow">
+					<img width="40px" src="./src/assets/right-arrow.png" alt="" />
+				</button>
+
+				<button class="arrow left-arrow">
+					<img
+						width="40px"
+						style="transform: rotate(180deg)"
+						src="./src/assets/right-arrow.png"
+						alt="" />
+				</button>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

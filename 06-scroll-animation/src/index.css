@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+	@apply text-blue-500 hover:text-blue-400 hover:underline transition-all;
+}
+
+#app .content {
+	@apply space-y-12;
+}
+
+h1 {
+	@apply text-4xl mb-12;
+}
+
+h2 {
+	@apply text-3xl;
+}
+
+.box {
+	@apply bg-blue-700 flex items-center justify-center rounded-lg h-screen w-96 shadow-md shadow-blue-700;
+
+	transition: transform 1s ease;
+	transform: translateY(20%);
+}
+
+.box.show {
+	transform: translateY(0);
+}

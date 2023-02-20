@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Muli, sans-serif;
+}
+
+.text {
+	text-transform: uppercase;
+}
+
+.logo {
+	width: 150px;
+}
+
+.nav-btn {
+	@apply text-2xl;
+}
+
+.open-btn {
+	@apply top-3 left-5;
+	position: fixed;
+}
+
+.nav {
+	@apply top-0 left-0 h-screen;
+	position: fixed;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in-out;
+	max-width: 384px;
+}
+
+.nav-black {
+	@apply bg-black w-3/5;
+}
+
+.nav-red {
+	@apply bg-red-600 w-11/12;
+	transition-delay: 0.2s;
+
+	&.open {
+		transition-delay: 0s;
+	}
+}
+
+.nav-white {
+	@apply bg-slate-200 w-11/12 p-14;
+	position: relative;
+	transition-delay: 0.1s;
+
+	&.open {
+		transition-delay: 0s;
+	}
+}
+
+.nav.open {
+	transform: translateX(0);
+}
+
+.close-btn {
+	@apply text-black top-10 right-8 opacity-80;
+	position: absolute;
+}
+
+.list {
+	@apply text-zinc-800;
+	list-style-type: none;
+
+	li {
+		@apply my-5;
+	}
+
+	a {
+		@apply text-base uppercase;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+}

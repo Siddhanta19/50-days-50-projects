@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Verify Account UI</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-zinc-800 text-center text-slate-200 justify-center">
+			<div class="wrapper mx-10 border-4 rounded-md">
+				<h2 class="text-2xl my-4">Verify Your Account</h2>
+				<p class="mx-5">
+					We emailed you the six digit code to
+					<span class="font-bold">cool_guy@email.com</span> <br />Enter the code
+					below to confirm your email address.
+				</p>
+				<div class="code-container my-5">
+					<input
+						type="text"
+						pattern="^[0-9]{1}$"
+						class="code"
+						placeholder="0"
+						min="0"
+						max="9"
+						required />
+					<input
+						type="text"
+						pattern="^[0-9]{1}$"
+						class="code"
+						placeholder="0"
+						min="0"
+						max="9"
+						required />
+					<input
+						type="text"
+						pattern="^[0-9]{1}$"
+						class="code"
+						placeholder="0"
+						min="0"
+						max="9"
+						required />
+					<input
+						type="text"
+						pattern="^[0-9]{1}$"
+						class="code"
+						placeholder="0"
+						min="0"
+						max="9"
+						required />
+					<input
+						type="text"
+						pattern="^[0-9]{1}$"
+						class="code"
+						placeholder="0"
+						min="0"
+						max="9"
+						required />
+					<input
+						type="text"
+						pattern="^[0-9]{1}$"
+						class="code"
+						placeholder="0"
+						min="0"
+						max="9"
+						required />
+				</div>
+				<small class="info"
+					>This is just a design only. We don't take your email. <br />
+					We don't have your email right?</small
+				>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

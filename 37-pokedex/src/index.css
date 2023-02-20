@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.card-wrapper {
+	@apply grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6;
+}
+
+.card {
+	@apply rounded-xl p-2 max-w-fit flex flex-col gap-2 justify-center items-center shadow-lg text-black;
+	z-index: 0;
+
+	.pokemon-avatar {
+		@apply w-60 h-48 rounded-xl relative;
+	}
+
+	.pokemon-avatar::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		transform: translateY(-10%);
+		@apply w-40 h-40;
+		background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
+	}
+
+	.badge-id {
+		@apply flex items-center justify-center text-sm md:text-base px-2 py-1 rounded-xl;
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	.pokemon-name {
+		@apply text-xl md:text-2xl;
+	}
+
+	.pokemon-type {
+		@apply capitalize text-lg md:text-xl;
+	}
+}
+
+.pokemon-avatar img {
+	@apply w-40 h-40;
+}
+
+.fire {
+	@apply bg-red-500;
+}
+
+.grass {
+	@apply bg-green-500;
+}
+
+.bug {
+	@apply bg-green-700;
+}
+
+.water {
+	@apply bg-blue-500;
+}
+
+.electric {
+	@apply bg-yellow-500;
+}
+
+.dark {
+	@apply bg-zinc-500;
+}
+
+.ghost {
+	@apply bg-violet-900;
+}
+
+.fairy {
+	@apply bg-pink-500;
+}
+
+.normal {
+	@apply bg-slate-200;
+}
+
+.steel {
+	@apply bg-slate-400;
+}
+
+.poison {
+	@apply bg-violet-500;
+}
+
+.psychic {
+	@apply bg-pink-600;
+}
+
+.flying {
+	@apply bg-sky-600;
+}
+
+.ground {
+	@apply bg-amber-400;
+}
+
+.dragon {
+	@apply bg-indigo-600;
+}
+
+.fighting {
+	@apply bg-red-600;
+}
+
+.ice {
+	@apply bg-sky-300;
+}
+
+.rock {
+	@apply bg-amber-600;
+}

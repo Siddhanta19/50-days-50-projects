@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Montserrat, sans-serif;
+}
+
+.panel-container {
+	@apply bg-slate-900 shadow-lg shadow-black rounded-md flex flex-col justify-center items-center p-8 max-w-md text-center;
+}
+
+.ratings-container {
+	@apply flex my-5 space-x-8;
+}
+
+.rating {
+	@apply p-5 text-slate-50;
+	flex: 1;
+	cursor: pointer;
+}
+
+.rating img {
+	@apply w-20;
+}
+
+.rating:hover,
+.rating.active {
+	@apply rounded-md;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 1.5);
+}
+
+.rating small {
+	@apply mt-2.5;
+	display: inline-block;
+}
+
+.rating:hover small,
+.rating.active small {
+	@apply text-slate-300;
+}
+
+.btn {
+	@apply bg-zinc-800 px-4 py-1 rounded-md outline-none;
+}
+.btn:active {
+	transform: scale(0.98);
+}
+
+.fa-heart {
+	@apply text-2xl mb-2.5 text-red-500;
+}

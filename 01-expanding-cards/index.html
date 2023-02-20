@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Expanding Cards</title>
+	</head>
+	<body>
+		<div class="wrapper flex">
+			<div
+				class="panel"
+				style="background-image: url(./src/assets/windows.jpg)">
+				<h3>Vanilla JS</h3>
+			</div>
+			<div class="panel" style="background-image: url(./src/assets/hut.jpg)">
+				<h3>React JS</h3>
+			</div>
+			<div
+				class="panel active"
+				style="background-image: url(./src/assets/eifel.jpg)">
+				<h3>Express JS</h3>
+			</div>
+			<div
+				class="panel active"
+				style="background-image: url(./src/assets/gallery.jpg)">
+				<h3>Svelte JS</h3>
+			</div>
+		</div>
+
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

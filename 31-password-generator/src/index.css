@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Muli, sans-serif;
+}
+
+.setting {
+	@apply flex justify-between items-center my-3;
+}
+
+#length {
+	@apply focus-within:outline-none focus-within:border-l-4 focus-within:border-indigo-500;
+}

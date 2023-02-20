@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Double Click Heart</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex flex-col min-h-screen items-center bg-zinc-800 text-slate-200">
+			<h2 class="text-xl mt-10">
+				Double Click on the image to
+				<i class="fa-solid fa-heart dark:text-red-500 text-red-600"></i> it
+			</h2>
+			<small class="mt-2 text-base"
+				>You liked it
+				<span class="text-red-300 font-bold tracking-widest" id="times">0</span>
+				times</small
+			>
+
+			<div
+				class="loveMe shadow-lg dark:shadow-zinc-900 mt-4 m-auto cursor-pointer relative rounded-xl bg-red-50 w-96 h-96"></div>
+		</div>
+
+		<script
+			src="https://kit.fontawesome.com/17d9786f54.js"
+			crossorigin="anonymous"></script>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

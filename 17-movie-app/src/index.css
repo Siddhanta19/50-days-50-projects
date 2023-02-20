@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+:root {
+	--primary-color: #22254b;
+	--secondary-color: #373b69;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#container {
+	background-color: var(--primary-color);
+	font-family: Poppins, sans-serif;
+}
+
+header {
+	@apply p-4;
+	display: flex;
+	justify-content: flex-end;
+	background-color: var(--secondary-color);
+}
+
+.search {
+	@apply px-4 py-2 rounded-full;
+	background-color: transparent;
+	border: 2px solid var(--primary-color);
+
+	&::placeholder {
+		@apply text-indigo-300;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+main {
+	@apply flex flex-col md:grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.movie {
+	@apply m-4 shadow-lg rounded-md;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	background-color: var(--secondary-color);
+
+	img {
+		width: 100%;
+	}
+
+	.movie-info {
+		@apply text-slate-200 py-2 px-4 tracking-wide;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.overview {
+		@apply bg-slate-300 p-8 peer-hover:-translate-y-0;
+		text-align: left;
+		position: absolute;
+		max-height: 100%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		color: var(--primary-color);
+		transform: translateY(101%);
+		transition: all 0.5s ease;
+	}
+}
+
+.movie:hover .overview {
+	transform: translateY(0);
+}
+
+.movie-info span {
+	@apply py-1 px-2;
+	background-color: var(--primary-color);
+
+	&.green {
+		@apply text-green-300;
+	}
+
+	&.orange {
+		@apply text-orange-500;
+	}
+
+	&.red {
+		@apply text-red-400;
+	}
+}

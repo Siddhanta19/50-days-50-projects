@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokedex</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex relative min-h-screen flex-col bg-white items-center dark:bg-black dark:text-slate-100 justify-center">
+			<button
+				class="theme-button flex items-center justify-center bg-[rgba(0,0,0,0.5)] hover:bg-[rgba(0,0,0,0.6)] dark:hover:bg-[rgba(70,63,63,0.74)] w-10 h-10 rounded-[50%] font-bold text-xl absolute right-10 top-8">
+				<i class="fa-solid fa-moon"></i>
+			</button>
+			<h1 class="my-10 text-3xl">Pokedex</h1>
+			<div class="card-wrapper grid gap-3 mx-5 mb-5"></div>
+		</div>
+		<script
+			src="https://kit.fontawesome.com/17d9786f54.js"
+			crossorigin="anonymous"></script>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

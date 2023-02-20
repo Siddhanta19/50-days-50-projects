@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.add {
+	position: fixed;
+	@apply top-4 right-4 bg-green-700 rounded-md py-2 px-4;
+}
+
+.note {
+	@apply bg-zinc-900 h-96 text-white mx-8 mb-20 rounded-xl;
+}
+
+.main {
+	@apply p-4;
+}
+
+.note .tools {
+	@apply bg-green-700 rounded-t-xl
+ flex justify-end px-2;
+}
+
+.note .tools button {
+	@apply text-xl m-2;
+}
+
+.note textarea {
+	@apply focus:outline-none text-xl p-4 bg-zinc-900 w-full h-full rounded-b-xl;
+}

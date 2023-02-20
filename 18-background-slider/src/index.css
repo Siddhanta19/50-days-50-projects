@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#container {
+	@apply bg-center bg-cover;
+	background-image: url("./src/assets/desert.jpg");
+	transition: 0.4s ease;
+}
+
+#container::before {
+	@apply w-full min-h-screen top-0 left-0 bottom-0 right-0;
+	content: "";
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-container {
+	@apply rounded-xl shadow-2xl shadow-black;
+	height: 70vh;
+	width: 70vh;
+	z-index: 10;
+	position: relative;
+	overflow: hidden;
+	/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+}
+
+.slide {
+	@apply w-full h-full;
+	background-size: cover;
+	background-position: center center;
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s ease;
+}
+
+.slide.active {
+	opacity: 1;
+}
+
+.arrow {
+	@apply bg-slate-200 rounded-2xl p-4;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.left-arrow {
+	left: 10%;
+}
+
+.right-arrow {
+	right: 10%;
+}

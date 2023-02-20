@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggle-container {
+	@apply flex items-center mt-4 w-52;
+}
+
+.toggle {
+	visibility: hidden;
+}
+
+.label {
+	@apply w-20 h-12 bg-zinc-400 mr-4 rounded-full;
+	display: inline-block;
+	cursor: pointer;
+	width: 90px;
+	position: relative;
+}
+
+.toggle:checked + .label {
+	@apply bg-purple-600;
+}
+
+.ball {
+	@apply bg-white w-10 top-1 left-1 h-10;
+	border-radius: 50%;
+	position: absolute;
+	animation: slideOff 0.3s linear forwards;
+}
+
+.toggle:checked + .label .ball {
+	animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+	0% {
+		transform: translateX(0) scale(1);
+	}
+
+	50% {
+		transform: translateX(20px) scale(1.2);
+	}
+
+	100% {
+		transform: translateX(40px) scale(1);
+	}
+}
+
+@keyframes slideOff {
+	0% {
+		transform: translateX(40px) scale(1);
+	}
+
+	50% {
+		transform: translateX(20px) scale(1.2);
+	}
+
+	100% {
+		transform: translateX(0px) scale(1);
+	}
+}

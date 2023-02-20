@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated-bg {
+	@apply px-10 bg-gradient-to-r from-zinc-700 to-zinc-800;
+	background-size: 200%; /* appropriate for the gradient image to cover the entire content*/
+	animation: bgPos 1s linear infinite; /* animation that just changes the gradient image position infinite times. */
+}
+
+.animated-bg-text {
+	@apply w-full px-10;
+	border-radius: 50px;
+}
+
+@keyframes bgPos {
+	/* changing gradient positioning */
+	0% {
+		background-position: 50% 0;
+	}
+
+	100% {
+		background-position: -150% 0;
+	}
+}

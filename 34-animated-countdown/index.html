@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animated Countdown</title>
+	</head>
+	<body>
+		<div id="container" class="min-h-screen bg-zinc-800 text-slate-200">
+			<div class="counter">
+				<div class="nums">
+					<span class="in">3</span>
+					<span>2</span>
+					<span>1</span>
+					<span>0</span>
+				</div>
+				<h3>Get Ready</h3>
+			</div>
+
+			<div class="final">
+				<h1 class="text-3xl uppercase">Go</h1>
+				<button
+					id="replay"
+					class="bg-blue-500 mt-3 hover:bg-blue-600 text-xl px-4 py-2 rounded-xl">
+					Replay
+				</button>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

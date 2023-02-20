@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.phone {
+	@apply rounded-xl border-2 border-slate-500 h-[600px] w-[340px];
+	position: relative;
+	overflow: hidden;
+}
+
+.phone .content {
+	opacity: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% - 60px);
+	width: 100%;
+	transition: opacity 0.4s ease;
+}
+
+.phone .content.show {
+	opacity: 1;
+}
+
+nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin-top: -5px;
+}
+
+nav ul {
+	@apply bg-slate-500;
+	cursor: pointer;
+	display: flex;
+	height: 60px;
+}
+
+nav li {
+	@apply bg-slate-700 p-2 flex-1 hover:bg-slate-300;
+	text-align: center;
+}
+
+nav ul li p {
+	@apply text-xs my-1;
+}
+
+nav ul li:hover,
+nav ul li.active {
+	@apply bg-zinc-800;
+}

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--left-bg-color: rgba(87, 84, 236, 0.7);
+	--right-bg-color: rgba(43, 43, 43, 0.8);
+	--left-btn-hover-bg: rgba(87, 84, 236, 1);
+	--right-btn-hover-bg: rgba(28, 122, 28, 1);
+	--hover-width: 75%;
+	--other-width: 25%;
+	--speed: 0.75s;
+}
+
+body {
+	font-family: Poppins, sans-serif;
+}
+
+h1 {
+	@apply text-5xl text-slate-200  whitespace-nowrap z-50;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+}
+
+.btn {
+	@apply border-4 text-lg w-60 p-6 text-center uppercase;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%);
+	z-index: 50;
+	transition: all 0.3s;
+}
+
+#container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+
+	&.left {
+		left: 0;
+		background: url("./assets/ps.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&.left .btn:hover {
+		background-color: var(--left-btn-hover-bg);
+		border-color: var(--left-btn-hover-bg);
+	}
+
+	&.left::before {
+		content: "";
+		position: absolute;
+		left: inherit;
+		width: 100%;
+		height: 100%;
+		background-color: var(--left-bg-color);
+	}
+
+	&.right {
+		right: 0;
+		background: url("./assets/xbox.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&.right .btn:hover {
+		background-color: var(--right-btn-hover-bg);
+		border-color: var(--right-btn-hover-bg);
+	}
+
+	&.right::after {
+		content: "";
+		position: absolute;
+		right: inherit;
+		width: 100%;
+		height: 100%;
+		background-color: var(--right-bg-color);
+	}
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+	transition: all var(--speed) ease-in-out;
+}
+
+.hover-left {
+	.left {
+		width: var(--hover-width) !important;
+	}
+
+	.right {
+		width: var(--other-width) !important;
+	}
+}
+
+.hover-right {
+	.right {
+		width: var(--hover-width) !important;
+	}
+
+	.left {
+		width: var(--other-width) !important;
+	}
+}
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: 2rem;
+		top: 30%;
+	}
+
+	.btn {
+		width: 12rem;
+		padding: 1.2rem;
+	}
+}

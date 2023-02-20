@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* defining custom properties for dark mode and light mode */
+/* :root {
+	--primary-color: #000;
+	--secondary-color: #fff;
+} */
+
+/* html {
+	transition: all 0.5s ease-in-out;
+} */
+
+/* primary color and secondary color if the html has a class of dark. */
+/* html.dark {
+	--primary-color: #fff;
+	--secondary-color: #333;
+} */
+
+/* apply these properties to the entire document if html contains the class of dark */
+
+/* html.dark {
+	background-color: #111;
+	color: var(--primary-color);
+} */
+
+/* .toggle {
+	background-color: var(--primary-color);
+    color: var(--secondary-color);
+} */
+
+/* ===================================================== */
+
+/* if dark class is there in html element, then the colors with dark prefix shall be applied */
+body {
+	transition: all 0.3s ease-in-out;
+	@apply dark:bg-black dark:text-slate-200 bg-slate-200 text-black;
+}
+
+.toggle {
+	@apply dark:bg-slate-200 dark:text-black bg-black text-slate-200 w-16 h-16 font-bold tracking-wider text-xl;
+	border-radius: 50%;
+	position: absolute;
+	top: 5%;
+}
+
+.clock-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.clock {
+	@apply w-52 h-52;
+	overflow: hidden;
+	position: relative;
+}
+
+.needle {
+	@apply dark:bg-slate-200 bg-black top-1/2 left-1/2 w-2 h-16;
+	position: absolute;
+	transform-origin: bottom center;
+	transition: all 0.3s ease-in-out;
+}
+
+.needle.hour {
+	/* putting the middle of needle hour in the middle */
+	transform: translate(-50%, -100%) rotate(50deg);
+}
+
+.needle.minute {
+	@apply h-20;
+	/* putting the middle of needle hour in the middle */
+	transform: translate(-50%, -100%) rotate(-30deg);
+}
+
+.needle.second {
+	@apply h-24 bg-red-300;
+	/* putting the middle of needle hour in the middle */
+	transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.center-point {
+	@apply bg-red-600 w-3 h-3 top-1/2 left-1/2;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.center-point::after {
+	content: "";
+	@apply bg-black w-1 h-1 top-1/2 left-1/2;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.time {
+	@apply text-6xl;
+}
+
+.date {
+	@apply m-4 text-lg tracking-wide uppercase font-semibold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.date .circle {
+	@apply dark:bg-slate-200 ml-1 dark:text-black bg-black w-8 h-8 font-bold text-base text-slate-200;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Poppins, sans-serif;
+}
+
+.quiz-container {
+	@apply bg-slate-200 mx-5 rounded-xl;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 1);
+	overflow: hidden;
+}
+
+.quiz-header {
+	@apply p-6;
+}
+
+h2 {
+	@apply text-center text-2xl my-3;
+}
+
+ul li {
+	@apply text-xl my-4;
+}
+
+ul li label {
+	cursor: pointer;
+}
+
+button {
+	@apply bg-purple-700 text-slate-100 w-full text-xl p-3;
+
+	&:hover {
+		@apply bg-purple-800;
+	}
+}

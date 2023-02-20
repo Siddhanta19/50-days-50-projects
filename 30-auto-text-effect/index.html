@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Auto Text Effect</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-zinc-800 text-slate-200 justify-center">
+			<h1 id="text" class="text-2xl">Starting...</h1>
+			<div
+				class="absolute space-x-2 bottom-5 bg-[rgba(0,0,0,0.2)] px-5 py-2 text-lg">
+				<label for="speed">Speed <span class="font-bold">:</span> </label>
+				<input
+					class="w-12 bg-zinc-800 text-center focus:outline-none"
+					type="number"
+					name="speed"
+					id="speed"
+					value="1"
+					maxlength="1"
+					min="1"
+					max="5"
+					step="1" />
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

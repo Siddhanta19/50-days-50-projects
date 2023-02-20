@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Good, Cheap, Fast</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-zinc-800 text-slate-200 justify-center">
+			<h1 class="text-3xl mb-5">How do you want your project to be?</h1>
+			<div class="toggle-container">
+				<input type="checkbox" name="good" id="good" class="toggle" />
+				<label for="good" class="label">
+					<div class="ball"></div>
+				</label>
+				<span>Good</span>
+			</div>
+			<div class="toggle-container">
+				<input type="checkbox" name="cheap" id="cheap" class="toggle" />
+				<label for="cheap" class="label">
+					<div class="ball"></div>
+				</label>
+				<span>Cheap</span>
+			</div>
+			<div class="toggle-container">
+				<input type="checkbox" name="fast" id="fast" class="toggle" />
+				<label for="fast" class="label">
+					<div class="ball"></div>
+				</label>
+				<span>Fast</span>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

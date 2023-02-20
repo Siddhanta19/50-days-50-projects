@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Strength Background</title>
+	</head>
+	<body>
+		<div
+			id="container"
+			class="flex min-h-screen flex-col items-center bg-zinc-800 justify-center">
+			<div class="background" id="background"></div>
+			<div class="bg-slate-300 rounded p-10 text-center shadow-md z-20">
+				<h1 class="text-3xl">Image Password Strength</h1>
+				<p class="text-sm mt-3 text-gray-700">
+					Change the password to see the effect.
+				</p>
+				<div class="my-4 text-left">
+					<label for="email" class="text-gray-900">Email : </label>
+					<input
+						type="text"
+						class="border block w-full p-2 mt-2 rounded"
+						id="email"
+						placeholder="Enter Email..." />
+				</div>
+
+				<div class="my-4 text-left">
+					<label for="password" class="text-gray-900">Password : </label>
+					<input
+						type="password"
+						class="border block w-full p-2 mt-2 rounded"
+						id="password"
+						placeholder="Enter Password..." />
+				</div>
+
+				<button
+					class="bg-black text-white py-2 mt-4 inline-block w-full rounded"
+					type="submit">
+					Submit
+				</button>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

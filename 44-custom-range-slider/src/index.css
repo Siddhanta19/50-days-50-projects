@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: Lato;
+}
+
+.range-container {
+	position: relative;
+}
+
+input[type="range"] {
+	@apply w-80 my-4 rounded-xl outline-none;
+
+	/* ! Chromium Based Browsers */
+
+	-webkit-appearance: none;
+
+	&::-webkit-slider-runnable-track {
+		@apply bg-purple-600 rounded-xl h-3;
+		cursor: pointer;
+	}
+
+	&::-webkit-slider-thumb {
+		@apply w-6 h-6 bg-white rounded-[50%] border border-solid -mt-1.5 border-purple-500;
+		-webkit-appearance: none;
+		cursor: pointer;
+	}
+
+	/* ! Firefox */
+
+	-webkit-appearance: none;
+
+	&::-moz-range-track {
+		@apply bg-purple-600 rounded-xl h-6;
+		cursor: pointer;
+	}
+
+	&::-moz-range-thumb {
+		@apply w-6 h-6 bg-white rounded-[50%] border border-solid -mt-1.5 border-purple-500;
+		-webkit-appearance: none;
+		cursor: pointer;
+	}
+}
+
+input[type="range"] + label {
+	@apply bg-white py-1 w-20 text-center rounded-md text-black;
+	position: absolute;
+	top: -60%;
+	right: 50%;
+	transform: translateX(50%);
+}

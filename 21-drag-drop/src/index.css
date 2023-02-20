@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#container {
+	@apply md:flex-row;
+}
+
+.fill {
+	@apply h-full w-full;
+	background-position: center center;
+	background-size: cover;
+	cursor: pointer;
+	background-image: url("./assets/coding.jpg");
+}
+
+/* style on hold */
+.hold {
+	@apply border-2 border-solid border-slate-400;
+}
+
+/* style on hover */
+.hovered {
+	@apply border-2 border-solid border-black bg-black;
+}
+
+.empty {
+	overflow: hidden;
+	@apply w-36 h-36 m-3 shadow-xl shadow-zinc-900 border-4 border-solid border-slate-400;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Input Wave</title>
+	</head>
+	<body>
+		<div
+			id="app"
+			class="flex from-sky-700 to-sky-800 bg-gradient-to-t h-screen flex-col items-center justify-center py-8 text-slate-200 selection:bg-black">
+			<div id="container">
+				<h1>Please Log in</h1>
+				<form>
+					<div class="form-control">
+						<input type="text" required />
+						<label>Email</label>
+					</div>
+					<div class="form-control">
+						<input type="password" required />
+						<label>Password</label>
+					</div>
+
+					<button class="btn">Login</button>
+
+					<p class="text">Don't have an account? <a href="#">Register</a></p>
+				</form>
+			</div>
+		</div>
+		<script type="module" src="./src/main.js"></script>
+	</body>
+</html>

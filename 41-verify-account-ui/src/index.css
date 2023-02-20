@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.code {
+	@apply w-12 h-12 bg-zinc-600 placeholder:opacity-50 font-bold text-white text-3xl text-center rounded-md outline-none;
+}
+
+.code:valid {
+	@apply border-white border-2 shadow-sm shadow-black;
+}
+
+.info {
+	@apply opacity-75;
+	display: inline-block;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
