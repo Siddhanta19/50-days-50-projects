@@ -5,4 +5,4 @@
 
 # All Thanks to Brad Traversy!
 
-<h1>Powered by Tailwind CSS, Vite, Javascript</h1>
+Powered by Tailwind CSS, Vite, Javascript
